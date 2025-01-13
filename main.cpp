@@ -5,21 +5,18 @@ using namespace std;
 
 void print_menu(int current_point, float player_balance, bool active_game);
 
+void pre_menu();
+
 int main(){
 
 
   float player_balance = 500;
   int min_bet = 10, max_bet = 200;
   int current_point = 8;
-  bool active_game = false;
+  bool active_game = true;
 
   print_menu(current_point,player_balance,active_game);
   
-
-  current_point = 5;
-  player_balance = 40;
-  print_menu(current_point,player_balance,active_game);
-
   return 0;
 }
 
@@ -50,14 +47,19 @@ void print_menu(int current_point, float player_balance,bool active_game){
   cout << endl;
   //make pre active game function
   if(active_game != true){
-    cout << setw(12) << "Bet Menu" << endl;
-    cout << "1.) Bet Pass Line" << endl;
-    cout << "2.) Bet Don't Pass Line" << endl;
-    cout << "3.) Roll the Dice" << endl;
-    cout << "4.) Quit" << endl;
-    cout << "Your Choice? ";
+    pre_menu();
   }
 
   //make active game function
 
+}
+
+
+void pre_menu(){
+  cout << setw(12) << "Bet Menu" << endl;
+  cout << "1.) Bet Pass Line" << endl;
+  cout << "2.) Bet Don't Pass Line" << endl;
+  cout << "3.) Roll the Dice" << endl;
+  cout << "4.) Quit" << endl;
+  cout << "Your Choice? ";
 }
