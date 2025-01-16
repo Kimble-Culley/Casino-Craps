@@ -15,6 +15,8 @@ int dice_logic();
 
 void win_condition(int current_point, bool &active_game, float &bet_amount, int running_point);
 
+void bet_check();
+
 int main(){
 
 
